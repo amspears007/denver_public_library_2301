@@ -18,7 +18,10 @@ class Author
       title: "Jane Eyre",
       publication_date: "October 16, 1847"
     }
-
     Book.new(book_hash)
+  end
+
+  def add_book(book)
+    @books << book
   end
 end
