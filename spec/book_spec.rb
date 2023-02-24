@@ -11,5 +11,6 @@ RSpec.describe Book do
 
   it 'has a an author and a publication year' do
     expect(book.author).to eq("Harper Lee")
+    expect(book.publication_year).to eq("1960")
   end
 end
