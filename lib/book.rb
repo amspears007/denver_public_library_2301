@@ -6,7 +6,6 @@ class Book
   
   def initialize(info)
     @title = info[:title]
-    # require 'pry'; binding.pry
     @author_first_name = info[:author_first_name]
     @author_last_name = info[:author_last_name]
     @publication_date = info[:publication_date]
