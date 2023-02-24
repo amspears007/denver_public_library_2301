@@ -15,10 +15,12 @@ class Author
 
   def write(title, publication_date)
     book_hash = {
-      title: "Jane Eyre",
-      publication_date: "October 16, 1847"
+      author_first_name: first_name,
+      author_last_name: last_name,
+      title: title,
+      publication_date: publication_date
     }
-    Book.new(book_hash)
+      Book.new(book_hash)
   end
 
   def add_book(book)
