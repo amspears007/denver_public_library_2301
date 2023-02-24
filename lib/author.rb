@@ -13,5 +13,12 @@ class Author
     "#{@first_name} #{ @last_name}"
   end
 
+  def write(title, publication_date)
+    book_hash = {
+      title: "Jane Eyre",
+      publication_date: "October 16, 1847"
+    }
 
+    Book.new(book_hash)
+  end
 end

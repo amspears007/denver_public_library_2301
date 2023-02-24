@@ -15,7 +15,8 @@ RSpec.describe Author do
   it 'can write books' do
     jane_eyre = charlotte_bronte.write("Jane Eyre", "October 16, 1847")
     expect(jane_eyre.class).to eq(Book)
-    # expect(charlotte_bronte.books).to eq([book])
+    expect(jane_eyre.title).to eq("Jane Eyre")
+    require 'pry'; binding.pry
 
   end
 end
