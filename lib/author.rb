@@ -6,6 +6,7 @@ class Author
   def initialize(info)
     @first_name = info[:first_name]
     @last_name = info[:last_name]
+    @name 
     @books = []
   end
 
@@ -14,16 +15,13 @@ class Author
   end
 
   def write(title, publication_date)
-    book_hash = {
-      author_first_name: first_name,
-      author_last_name: last_name,
+    new_book = Book.new({
+      author_first_name: @first_name,
+      author_last_name: @last_name,
       title: title,
       publication_date: publication_date
-    }
-      Book.new(book_hash)
-  end
-
-  def add_book(book)
-    @books << book
+    })
+    @books << new_book
+    new_book 
   end
 end
